@@ -1,0 +1,52 @@
+:root {
+    /* Colors */
+
+        /* Primary */
+            --very-dark-magenta: hsl(300, 43%, 22%);
+            --soft-pink: hsl(333, 80%, 67%);
+
+        /* Neutral */
+            --dark-grayish-magenta: hsl(303, 10%, 53%);
+            --light-grayish-magenta: hsl(300, 24%, 96%);
+
+            --ntrl-min: hsl(0, 0%, 100%);
+
+    /* Fonts */
+
+        /* Font-size */
+            --fs-base: 1.5rem;
+
+        /* Font-family */
+            --ff-primary: 'League Spartan', sans-serif;
+
+        /* Font-weight */
+            --fw-sm: 400;
+            --fw-md: 500;
+            --fw-lg: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    background: 
+        url('../images/bg-pattern-top-mobile.svg') top no-repeat,
+        url('../images/bg-pattern-bottom-mobile.svg') bottom no-repeat,
+        var(--ntrl-min);
+
+    font-size: var(--fs-base);
+    font-family: var(--ff-primary);
+}
