@@ -15,6 +15,10 @@
 
         /* Font-size */
             --fs-base: 1.5rem;
+            --fs-md: 1.7rem;
+            --fs-lg: 1.9rem;
+            --fs-xl: 4rem;
+            --fs-2xl: 5.6rem;
 
         /* Font-family */
             --ff-primary: 'League Spartan', sans-serif;
@@ -42,6 +46,8 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
 
+    padding: 8.2rem 2.4rem 9.9rem;
+    
     background: 
         url('../images/bg-pattern-top-mobile.svg') top no-repeat,
         url('../images/bg-pattern-bottom-mobile.svg') bottom no-repeat,
@@ -49,4 +55,214 @@ body {
 
     font-size: var(--fs-base);
     font-family: var(--ff-primary);
+}
+
+.grid { display: grid; }
+
+.grid--content {
+    gap: clamp(3.9rem, 10vw, 12.5rem);
+}
+
+.grid--text {
+    max-width: 44.5rem;
+    gap: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.grid--ratings {
+    gap: 1.6rem;
+}
+
+.grid--testimonials {
+    gap: clamp(1.6rem, 5vw, 3rem);
+}
+
+.social-proof {
+    max-width: 111rem;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(4.9rem, 5vw, 7.1rem);
+}
+
+.social-proof__title {
+    min-height: 10.2rem;
+
+    color: var(--very-dark-magenta);
+
+    font-size: clamp(var(--fs-xl), 8vw, var(--fs-2xl));
+    font-weight: var(--fw-lg);
+    text-align: center;
+    line-height: clamp(3.2rem, 5vw, 4.8rem);
+    letter-spacing: clamp(-1.43px, 3vw, -2px);
+}
+
+.social-proof__description {
+    color: var(--dark-grayish-magenta);
+
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-md);
+    text-align: center;
+    line-height: 2.5rem;
+    letter-spacing: -0.63px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.52rem, 3vw, 3.24rem);
+
+    padding: 1.6rem 0 1.5rem;
+
+    background: var(--light-grayish-magenta);
+
+    border-radius: 8px;
+}
+
+.rating__stars-box {
+    display: flex;
+    gap: .8rem;
+}
+
+.rating__text {
+    color: var(--very-dark-magenta);
+
+    font-size: var(--fs-md);
+    font-weight: var(--fw-lg);
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2.3rem, 5vw, 2.8rem);
+
+    padding: 4rem 3.2rem 3.5rem;
+
+    background: var(--very-dark-magenta);
+
+    font-size: var(--fs-md);
+    font-style: normal;
+
+    border-radius: 8px;
+}
+
+.testimonial__user-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2.3rem;
+}
+
+.testimonial__icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.testimonial__user-details {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.testimonial__name {
+    color: var(--ntrl-min);
+
+    font-weight: var(--fw-lg);
+}
+
+.testimonial__status {
+    color: var(--ntrl-min);
+
+    font-weight: var(--fw-sm);
+}
+
+.testimonial__status--verified {
+    color: var(--soft-pink);
+}
+
+.testimonial__quote {
+    color: var(--ntrl-min);
+
+    font-weight: var(--fw-md);
+    line-height: 2.2rem;
+    letter-spacing: -.3px;
+}
+
+@media screen and (min-width: 37.5em) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 11.8rem 5rem 10rem;
+
+        background: 
+        url('../images/bg-pattern-top-desktop.svg') top left no-repeat,
+        url('../images/bg-pattern-bottom-desktop.svg') bottom right no-repeat,
+        var(--ntrl-min);
+    }
+
+    .grid--content {
+        align-items: center;
+        /* grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); */
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .grid--ratings {
+        flex-grow: 1;
+    }
+
+    .grid--testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+
+    .social-proof__title  {
+        text-align: left;
+        letter-spacing: -2px;
+        line-height: 4.8rem;
+    }
+
+    .social-proof__description  {
+        text-align: left;
+    }
+
+    .rating {
+        padding: 2rem 0 2rem 3.2rem;
+        flex-direction: row;
+    }
+
+    .rating:nth-child(1) {
+        padding-right: 7.9rem;
+        margin-right: auto;
+    }
+
+    .rating:nth-child(2) {
+        padding-right: 4.7rem;
+        margin: auto;
+    }
+
+    .rating:nth-child(3) {
+        padding-right: 7.6rem;
+        margin-left: auto;
+    }
+
+    .testimonial {
+        flex: 1 30rem;
+    }
+
+    .testimonial:nth-child(1) {
+        margin-bottom: auto;
+    }
+
+    .testimonial:nth-child(2) {
+        margin: 1.6rem 0;
+    }
+
+    .testimonial:nth-child(3) {
+        margin-top: auto;
+    }
 }
