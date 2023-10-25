@@ -57,27 +57,33 @@ body {
     font-family: var(--ff-primary);
 }
 
-.grid { display: grid; }
+.flex { display: flex; }
 
-.grid--content {
+.flex--content {
+    flex-direction: column;
     gap: clamp(3.9rem, 10vw, 12.5rem);
 }
 
-.grid--text {
+.flex--text {
     max-width: 44.5rem;
+
+    flex-direction: column;
     gap: clamp(1.8rem, 3vw, 2.5rem);
 }
 
-.grid--ratings {
+.flex--ratings {
+    flex-direction: column;
     gap: 1.6rem;
 }
 
-.grid--testimonials {
+.flex--testimonials {
+    flex-direction: column;
     gap: clamp(1.6rem, 5vw, 3rem);
 }
 
 .social-proof {
     max-width: 111rem;
+
     display: flex;
     flex-direction: column;
     gap: clamp(4.9rem, 5vw, 7.1rem);
@@ -203,21 +209,19 @@ body {
         var(--ntrl-min);
     }
 
-    .grid--content {
+    .flex--content {
+        flex-flow: row wrap;
         align-items: center;
-        /* grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); */
-        display: flex;
-        flex-wrap: wrap;
     }
 
-    .grid--ratings {
-        flex-grow: 1;
+    .flex--ratings {
+        flex-direction: column;
+        flex: 1;
     }
 
-    .grid--testimonials {
-        display: flex;
-        flex-wrap: wrap;
-        flex-grow: 1;
+    .flex--testimonials {
+        flex-flow: row wrap;
+        flex: 1;
     }
 
     .social-proof__title  {
